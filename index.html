@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblíbený Film</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- Hlavní stránka -->
+    <div id="mainSection" class="section visible">
+        <h1>Nejoblíbenější film</h1>
+        <p id="favoriteMovie">Žádný film nebyl nastaven.</p>
+        <button onclick="showSection('settingsSection')">Nastavit film</button>
+    </div>
+
+    <!-- Nastavovací stránka -->
+    <div id="settingsSection" class="section">
+        <h1>Nastavit nejoblíbenější film</h1>
+        <input type="text" id="movieInput" placeholder="Zadejte název filmu">
+        <div>
+            <button onclick="saveMovie()">Uložit</button>
+            <button onclick="showSection('mainSection')">Zpět</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
